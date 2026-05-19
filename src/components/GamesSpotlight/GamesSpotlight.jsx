@@ -36,7 +36,7 @@ const BrandShowCase = () => {
                 alt={game.name}
               />
 
-              <div className="overlay">
+              <div className="overlayContent">
                 <h3>{game.name}</h3>
                 <p>
                   <span>⭐ {game.rating}</span>

@@ -52,7 +52,7 @@
   object-fit: cover;
 }
 
-.overlay {
+.overlayContent {
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -61,7 +61,7 @@
   background: linear-gradient(transparent, rgba(0, 0, 0, 0.95));
 }
 
-.overlay p {
+.overlayContent p {
   display: flex;
   align-items: center;
   gap: 5px;
