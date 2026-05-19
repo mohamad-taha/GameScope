@@ -1,0 +1,19 @@
+.banner {
+  margin: 0;
+  text-align: center;
+  font-size: 180px;
+  letter-spacing: 30px;
+  background: linear-gradient(to bottom, white, black 85%) no-repeat;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0.5;
+  position: absolute;
+  bottom: -100px;
+}
+
+@media (max-width: 767px) {
+  .banner {
+    display: none;
+  }
+}

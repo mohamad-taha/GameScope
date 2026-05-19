@@ -1,0 +1,28 @@
+.errorContainer {
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  gap: 15px;
+
+  color: white;
+}
+
+.errorIcon {
+  font-size: 70px;
+}
+
+.errorContainer h2 {
+  font-size: 32px;
+}
+
+.errorContainer p {
+  color: #999;
+
+  max-width: 400px;
+}

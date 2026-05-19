@@ -1,0 +1,35 @@
+.PCCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #161616;
+  border: 1px solid rgba(255, 165, 0, 0.15);
+  transition: 0.2s;
+}
+
+.PCCard:hover {
+  border-color: var(--primary-color);
+  transform: translateY(6px);
+  box-shadow: 0 0 16px rgba(255, 140, 0, 0.5);
+}
+
+.PCCard img {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  border-radius: 10px 10px 0 0;
+  object-fit: cover;
+}
+
+.PCCardInfo {
+  padding: 20px;
+}
+
+.PCCardInfo span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

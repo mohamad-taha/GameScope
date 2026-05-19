@@ -1,0 +1,56 @@
+.dropDown {
+  position: relative;
+  cursor: pointer;
+  transition: 0.2s;
+  border: none;
+  border-bottom: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dropDownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background: #1b1b1b;
+  padding: 10px;
+  border-radius: 5px;
+  list-style: none;
+  cursor: default;
+  padding: 20px 0;
+  margin-top: 2px;
+  width: max-content;
+  padding-left: 20px;
+  padding-right: 20px;
+  height: 250px;
+  overflow-y: scroll;
+}
+
+.dropDownMenu::-webkit-scrollbar {
+  width: 2px;
+}
+
+.dropDownMenu::-webkit-scrollbar-thumb {
+  background: #ff8c00;
+}
+
+.dropDown:hover .dropDownMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dropDown:hover {
+  border-bottom: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.dropDown:hover svg {
+  fill: var(--primary-color);
+  transition: 0.2s;
+}
+
+.dropDown .dropDownMenu a {
+  font-size: 16px;
+}

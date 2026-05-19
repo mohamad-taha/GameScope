@@ -1,0 +1,38 @@
+.sidebar {
+  background-color: #161616;
+  height: 100vh;
+  z-index: 300;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 40px;
+  transition: 200ms;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(black, black, black, 0.7);
+  z-index: 200;
+}
+
+.sidebar .linksContainer {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sidebar,
+  .overlay {
+    display: none !important;
+  }
+}
