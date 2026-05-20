@@ -33,3 +33,9 @@
   align-items: center;
   gap: 5px;
 }
+
+@media (max-width: 1024px) {
+  .PCCard {
+    width: 300px;
+  }
+}

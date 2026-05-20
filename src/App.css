@@ -56,9 +56,14 @@ body {
   transition: 0.2s;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .container {
     padding: 0 20px;
+  }
+
+  .hidden {
+    opacity: 1;
+    pointer-events: all;
   }
 }
 
