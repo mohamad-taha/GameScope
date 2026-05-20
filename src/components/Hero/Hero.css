@@ -11,15 +11,11 @@
 }
 
 .hero .heroContent {
-  width: 40%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 25px;
-}
-
-.hero img {
-  width: 600px;
 }
 
 .hero .heroContent small {
@@ -35,6 +31,10 @@
   border-radius: 20px;
 }
 
+.hero img {
+  width: 50%;
+}
+
 @media (max-width: 767px) {
   .hero .heroContent h1 {
     font-size: 30px;
@@ -46,11 +46,11 @@
 
   .hero .heroContent {
     width: 100%;
-    gap: 10px;
   }
 
   .hero img {
     width: 100%;
+    margin-top: 20px;
   }
 }
 

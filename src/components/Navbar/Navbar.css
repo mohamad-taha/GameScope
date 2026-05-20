@@ -9,6 +9,7 @@ nav {
   top: 0;
   z-index: 100;
   transition: 0.3s;
+  overflow-x: hidden;
 }
 
 .navScrolled {
@@ -21,6 +22,7 @@ nav .navLinks .linksContainer {
   display: flex;
   align-items: center;
   gap: 80px;
+  padding: 0;
 }
 
 @media (max-width: 1024px) {
