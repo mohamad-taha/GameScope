@@ -82,6 +82,8 @@ footer .linksContainer {
 
   .footerContent div:first-child {
     width: auto;
+    flex-direction: column;
+    gap: 0;
   }
 
   footer .footerLinks {

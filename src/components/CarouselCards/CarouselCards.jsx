@@ -10,6 +10,7 @@ const CarouselCards = ({ game }) => {
 
   return (
     <div
+      onClick={() => setHide(false)}
       onMouseOver={() => setHide(false)}
       onMouseLeave={() => setHide(true)}
       className="carouselCards"
@@ -19,7 +20,11 @@ const CarouselCards = ({ game }) => {
         <h2>{game.name}</h2>
         <div>
           {game.parent_platforms.map((platform) => (
-            <span key={platform.platform.id} aria-label={platform.platform.name} role="img">
+            <span
+              key={platform.platform.id}
+              aria-label={platform.platform.name}
+              role="img"
+            >
               {platform.platform.name === "PlayStation" && (
                 <FaPlaystation fontSize={25} />
               )}
@@ -30,7 +35,13 @@ const CarouselCards = ({ game }) => {
             </span>
           ))}
           <p>{game.released}</p>
-          <Link className="primaryBtn" to={`/game/${game.id}`} aria-label={`View details for ${game.name}`}>View Details</Link>
+          <Link
+            className="primaryBtn"
+            to={`/game/${game.id}`}
+            aria-label={`View details for ${game.name}`}
+          >
+            View Details
+          </Link>
         </div>
       </div>
     </div>

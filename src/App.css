@@ -1,7 +1,13 @@
+@font-face {
+  font-family: myRubik;
+  src: url(./assets/fonts/Rubik-Regular.ttf);
+  font-display: swap;
+}
+
 * {
   color: white;
   box-sizing: border-box;
-  font-family: rubik;
+  font-family: myRubik;
 }
 
 :root {
