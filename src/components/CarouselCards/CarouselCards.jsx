@@ -37,7 +37,7 @@ const CarouselCards = ({ game }) => {
           <p>{game.released}</p>
           <Link
             className="primaryBtn"
-            to={`/game/${game.id}`}
+            to={`/games/${game.id}`}
             aria-label={`View details for ${game.name}`}
           >
             View Details

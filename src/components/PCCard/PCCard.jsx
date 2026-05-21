@@ -10,7 +10,7 @@ const PCCard = ({ game }) => {
         <p>{game.genres.map((genre) => genre.name).join(", ")}</p>
         <span>⭐ {game.rating}</span>
       </div>
-      <Link className="primaryBtn" to={`/game/${game.id}`} aria-label={`View details for ${game.name}`}>
+      <Link className="primaryBtn" to={`/games/${game.id}`} aria-label={`View details for ${game.name}`}>
         View Details
       </Link>
     </div>

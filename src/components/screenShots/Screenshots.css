@@ -1,0 +1,36 @@
+.screenshotsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  gap: 20px;
+}
+
+.screenshotsGrid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.screenshotsGrid img:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 767px) {
+  .screenshotsGrid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .screenshotsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .screenshotsGrid img {
+    width: 45%;
+  }
+}

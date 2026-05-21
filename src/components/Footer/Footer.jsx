@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import "./Footer.css";
+import logo from "../../assets/imgs/logo.webp";
 import Links from "../Links/Links";
+import "./Footer.css";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,7 +11,7 @@ const Footer = () => {
       <div className="footerContent">
         <div>
           <Link aria-label="Go to homepage">
-            <img src="./logo.webp" alt="logo" width={200} />
+            <img src={logo} alt="logo" width={200} />
           </Link>
           <p>
             Discover trending games, upcoming releases, and top-rated titles

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Links from "../Links/Links";
 import SidebarBtn from "../SidebarBtn/SidebarBtn";
+import  logo  from "../../assets/imgs/logo.webp";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -29,7 +30,7 @@ const Navbar = () => {
           style={{ objectFit: "cover" }}
           width={150}
           height={70}
-          src="./logo.webp"
+          src={logo}
           alt="Logo"
         />
       </Link>

@@ -63,3 +63,34 @@ export const fetchPlatforms = async () => {
 
   return response.json();
 };
+
+export const fetchGame = async (id) => {
+  const response = await fetch(`${BASE_URL}/games/${id}?key=${API_KEY}`);
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch");
+  }
+
+  return response.json();
+};
+
+export const fetchScreenshots = async (id) => {
+  const response = await fetch(
+    `${BASE_URL}/games/${id}/screenshots?key=${API_KEY}`,
+  );
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch");
+  }
+  return response.json();
+};
+
+export const fetchTrailer = async (id) => {
+  const response = await fetch(`${BASE_URL}/games/${id}/movies?key=${API_KEY}`);
+
+  if (!response.ok) {
+    throw new Error("Failed to fetch");
+  }
+
+  return response.json();
+};
