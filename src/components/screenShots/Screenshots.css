@@ -30,6 +30,7 @@
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .screenshotsGrid img {
     width: 45%;
   }

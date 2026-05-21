@@ -11,6 +11,7 @@ const PCCards = () => {
     data: games,
     error,
     isLoading,
+    refetch
   } = useQuery({
     queryKey: ["PCGames"],
     queryFn: fetchPCGames,
@@ -22,7 +23,7 @@ const PCCards = () => {
       {isLoading ? (
         <Loader />
       ) : error ? (
-        <ErrorMsg />
+        <ErrorMsg refetch={refetch}/>
       ) : (
         <div className="PCCardsContainer">
           {games?.results.map((game) => (

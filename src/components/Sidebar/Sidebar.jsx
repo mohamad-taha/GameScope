@@ -2,6 +2,7 @@ import Links from "../Links/Links";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { Context } from "../../context/Context";
+import logo from "../../assets/imgs/logo.webp";
 import "./Sidebar.css";
 
 const Sidebar = () => {
@@ -23,7 +24,7 @@ const Sidebar = () => {
         className="sidebar"
       >
         <Link>
-          <img width={150} src="./logo.webp" alt="logo" />
+          <img width={150} src={logo} alt="logo" />
         </Link>
         <Links />
       </div>
