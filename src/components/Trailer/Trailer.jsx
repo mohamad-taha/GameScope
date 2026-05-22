@@ -2,23 +2,22 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchTrailer } from "../../service/rawg";
 import Loader from "../Loader/Loader";
 import ErrorMsg from "../Error/ErrorMsg";
-import { useParams } from "react-router-dom";
 import "./Trailer.css";
+import { useParams } from "react-router-dom";
 
-const Trailer = () => {
+const Trailer = ({ game }) => {
   const params = useParams();
-
   const {
     data: trailer,
     error,
     isLoading,
     refetch,
   } = useQuery({
-    queryKey: ["gameTrailer"],
-    queryFn: () => fetchTrailer(params.id),
+    queryKey: ["gameTrailer", params.id],
+    queryFn: () => fetchTrailer(game.name),
   });
 
-  console.log(trailer);
+  const videoId = trailer?.items?.[0]?.id?.videoId;
 
   return (
     <div className="trailerSection mt">
@@ -27,16 +26,17 @@ const Trailer = () => {
         <Loader />
       ) : error ? (
         <ErrorMsg refetch={refetch} />
-      ) : trailer?.results?.length !== 0 ? (
-        trailer?.results[0] && (
-          <video controls className="trailerVideo">
-            <source src={trailer.results[0].data.max} type="video/mp4" />
-          </video>
-        )
+      ) : trailer?.items?.length > 0 ? (
+        <iframe
+          loading="lazy"
+          width="100%"
+          height="500"
+          src={`https://www.youtube.com/embed/${videoId}`}
+          allowFullScreen
+        />
       ) : (
         <div className="noTrailer">
           <span>🎮</span>
-
           <p>No trailer available</p>
         </div>
       )}

@@ -5,7 +5,6 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import "./App.css";
 
 const App = () => {
-
   return (
     <>
       <Navbar />

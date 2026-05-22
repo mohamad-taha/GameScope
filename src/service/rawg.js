@@ -3,6 +3,7 @@ const API_KEY = import.meta.env.VITE_RAWG_API_KEY;
 const today = new Date().toISOString().split("T")[0];
 const nextYear = new Date().getFullYear() + 1;
 const currentYear = new Date().getFullYear();
+const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
 
 export const fetchGames = async () => {
   const response = await fetch(`${BASE_URL}/games?key=${API_KEY}`);
@@ -85,8 +86,10 @@ export const fetchScreenshots = async (id) => {
   return response.json();
 };
 
-export const fetchTrailer = async (id) => {
-  const response = await fetch(`${BASE_URL}/games/${id}/movies?key=${API_KEY}`);
+export const fetchTrailer = async (gameName) => {
+  const response = await fetch(
+    `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${gameName} official trailer&type=video&maxResults=1&key=${YOUTUBE_API_KEY}`,
+  );
 
   if (!response.ok) {
     throw new Error("Failed to fetch");

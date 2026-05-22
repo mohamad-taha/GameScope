@@ -1,24 +1,9 @@
-import { useQuery } from "@tanstack/react-query";
-import { useParams } from "react-router-dom";
-import { fetchGame } from "../../service/rawg";
 import Loader from "../Loader/Loader";
 import ErrorMsg from "../Error/ErrorMsg";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import "./GameDetailsCard.css";
 
-const GameDetailsCard = () => {
-  const params = useParams();
-
-  const {
-    data: game,
-    error,
-    isLoading,
-    refetch,
-  } = useQuery({
-    queryKey: ["gameDetails"],
-    queryFn: () => fetchGame(params.id),
-  });
-
+const GameDetailsCard = ({ game, isLoading, error, refetch }) => {
   return (
     <div style={{ marginTop: "120px" }}>
       {isLoading ? (

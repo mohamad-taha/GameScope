@@ -12,6 +12,7 @@ const ScreenShots = () => {
     data: screenshots,
     error,
     isLoading,
+    refetch
   } = useQuery({
     queryKey: ["gameScreenshots"],
     queryFn: () => fetchScreenshots(params.id),
@@ -23,7 +24,7 @@ const ScreenShots = () => {
       {isLoading ? (
         <Loader />
       ) : error ? (
-        <ErrorMsg />
+        <ErrorMsg refetch={refetch}/>
       ) : (
         <div className="screenshotsGrid">
           {screenshots?.results.map((image) => (

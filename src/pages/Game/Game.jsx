@@ -1,10 +1,23 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import GameDetailsCard from "../../components/GameDetailsCard/GameDetailsCard";
 import Trailer from "../../components/Trailer/Trailer";
 import Screenshots from "../../components/screenShots/Screenshots";
 import { useEffect } from "react";
+import { fetchGame } from "../../service/rawg";
+import { useQuery } from "@tanstack/react-query";
 const Game = () => {
   const { pathname } = useLocation();
+  const params = useParams();
+
+  const {
+    data: game,
+    error,
+    isLoading,
+    refetch,
+  } = useQuery({
+    queryKey: ["gameDetails", params.id],
+    queryFn: () => fetchGame(params.id),
+  });
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -12,9 +25,14 @@ const Game = () => {
 
   return (
     <div className="container">
-      <GameDetailsCard />
+      <GameDetailsCard
+        game={game}
+        error={error}
+        isLoading={isLoading}
+        refetch={refetch}
+      />
       <Screenshots />
-      <Trailer />
+      <Trailer game={game} />
     </div>
   );
 };
