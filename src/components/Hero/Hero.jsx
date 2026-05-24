@@ -1,7 +1,7 @@
-import "./Hero.css";
 import Joystick from "../../assets/imgs/joystick.webp";
 import { Link } from "react-router-dom";
 import Banner from "../GameScopeBanner/Banner";
+import "./Hero.css";
 
 const Hero = () => {
   return (

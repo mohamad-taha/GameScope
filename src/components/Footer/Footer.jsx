@@ -10,7 +10,7 @@ const Footer = () => {
     <footer className="container mt">
       <div className="footerContent">
         <div>
-          <Link aria-label="Go to homepage">
+          <Link to="/" aria-label="Go to homepage">
             <img src={logo} alt="logo" width={200} />
           </Link>
           <p>
@@ -23,28 +23,32 @@ const Footer = () => {
           <div className="personalLinks">
             <a
               target="_blank"
-              href="https://mohamad-taha.github.io/portfolio/"
+              rel="noopener noreferrer"
+              href="https://mohamadtahakasir.github.io/"
               aria-label="Open Portfolio (new tab)"
             >
-              Portolio
+              Portfolio
             </a>
             <a
               target="_blank"
-              href="https:www.linkedin.com/in/mohamadtahakasir"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/mohamadtahakasir"
               aria-label="Open Linkedin (new tab)"
             >
               Linkedin
             </a>
             <a
               target="_blank"
-              href="https://github.com/mohamad-taha"
+              rel="noopener noreferrer"
+              href="https://github.com/mohamadtahakasir"
               aria-label="Open Github (new tab)"
             >
               Github
             </a>
             <a
               target="_blank"
-              href="https://wa.me/963935447842"
+              rel="noopener noreferrer"
+              href="https://wa.me/your-number"
               aria-label="Open Whatsapp (new tab)"
             >
               Whatsapp

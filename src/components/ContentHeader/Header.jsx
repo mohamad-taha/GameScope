@@ -1,14 +1,16 @@
-import { Link } from "react-router-dom";
 import "./Header.css";
 
-
-const Header = ({ title, link }) => {
+const Header = ({ title, click }) => {
   return (
     <div className="contentHeader">
       <h1> {title}</h1>
-      <Link className="primaryBtn" to={link} aria-label={`See all ${title}`}>
+      <button
+        className="primaryBtn"
+        onClick={click}
+        aria-label={`See all ${title}`}
+      >
         SEE ALL
-      </Link>
+      </button>
     </div>
   );
 };

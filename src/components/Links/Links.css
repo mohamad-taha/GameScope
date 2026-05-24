@@ -1,4 +1,6 @@
-.linksContainer li a {
+.linksContainer li a,
+.linksContainer li button,
+.linksContainer li {
   text-decoration: none;
   font-size: 18px;
   transition: 0.2s;
@@ -6,7 +8,8 @@
   letter-spacing: 1px;
 }
 
-.linksContainer li a:hover {
+.linksContainer li a:hover,
+.linksContainer li button:hover {
   border-bottom: 2px solid var(--primary-color);
   color: var(--primary-color);
 }

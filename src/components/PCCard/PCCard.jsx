@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
-import "./PCCard.css";
+import { Link } from "react-router-dom"; 
+import "./PCCard.css"; 
 
-const PCCard = ({ game }) => {
-  return (
+const PCCard = ({ game }) => { 
+  return ( 
     <div className="PCCard">
       <img src={game.background_image} alt={game.name} />
       <div className="PCCardInfo">
@@ -11,10 +11,12 @@ const PCCard = ({ game }) => {
         <span>⭐ {game.rating}</span>
       </div>
       <Link className="primaryBtn" to={`/games/${game.id}`} aria-label={`View details for ${game.name}`}>
-        View Details
+        View Details 
       </Link>
     </div>
-  );
-};
+  ); 
+}; 
 
-export default PCCard;
+export default PCCard; 
+
+

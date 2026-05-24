@@ -17,13 +17,8 @@ const Links = () => {
       </li>
       <Menu />
       <li>
-        <Link to={"/Reviews"} aria-label="Navigate to Reviews">
-          Reviews
-        </Link>
-      </li>
-      <li>
-        <Link to={"/News"} aria-label="Navigate to News">
-          News
+        <Link to={"/upcoming"} aria-label="Navigate to Upcoming Games">
+          Upcoming
         </Link>
       </li>
     </ul>

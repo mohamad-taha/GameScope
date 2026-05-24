@@ -1,6 +1,6 @@
 import "./ErrorMsg.css";
 
-const Error = ({refetch}) => {
+const Error = ({ refetch }) => {
   return (
     <div className="errorContainer">
       <div className="errorIcon">⚠️</div>
@@ -9,7 +9,11 @@ const Error = ({refetch}) => {
 
       <p>Failed to load games. Please try again later.</p>
 
-      <button className="primaryBtn" onClick={refetch} aria-label="Retry loading games">
+      <button
+        className="primaryBtn"
+        onClick={refetch}
+        aria-label="Retry loading games"
+      >
         Retry
       </button>
     </div>

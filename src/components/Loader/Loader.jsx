@@ -1,9 +1,11 @@
-import "./Loader.css";
+import "./Loader.css"; 
 
-const Loader = () => {
+const Loader = () => { 
   return <div className="loaderBox" role="status" aria-label="Loading">
     <div className="loader"></div>
   </div>;
-};
+}; 
 
-export default Loader;
+export default Loader; 
+
+

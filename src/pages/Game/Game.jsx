@@ -5,6 +5,7 @@ import Screenshots from "../../components/screenShots/Screenshots";
 import { useEffect } from "react";
 import { fetchGame } from "../../service/rawg";
 import { useQuery } from "@tanstack/react-query";
+import Reviews from "../../components/Reviews/Reviews";
 const Game = () => {
   const { pathname } = useLocation();
   const params = useParams();
@@ -33,6 +34,7 @@ const Game = () => {
       />
       <Screenshots />
       <Trailer game={game} />
+      <Reviews />
     </div>
   );
 };

@@ -48,6 +48,10 @@
   transition: 0.2s;
 }
 
-.dropDown .dropDownMenu a {
-  font-size: 16px;
+.dropDown .dropDownMenu button {
+  background: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  cursor: pointer;
 }

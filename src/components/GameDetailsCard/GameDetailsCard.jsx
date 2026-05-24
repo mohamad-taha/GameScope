@@ -1,16 +1,16 @@
-import Loader from "../Loader/Loader";
-import ErrorMsg from "../Error/ErrorMsg";
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
-import "./GameDetailsCard.css";
+import Loader from "../Loader/Loader"; 
+import ErrorMsg from "../Error/ErrorMsg"; 
+import { FaArrowUpRightFromSquare } from "react-icons/fa6"; 
+import "./GameDetailsCard.css"; 
 
-const GameDetailsCard = ({ game, isLoading, error, refetch }) => {
-  return (
+const GameDetailsCard = ({ game, isLoading, error, refetch }) => { 
+  return ( 
     <div style={{ marginTop: "120px" }}>
-      {isLoading ? (
+      {isLoading ? ( 
         <Loader />
-      ) : error ? (
+      ) : error ? ( 
         <ErrorMsg refetch={refetch} />
-      ) : (
+      ) : ( 
         <div className="gameDetailsCard">
           <div className="gameDetailsCardHero">
             <img src={game.background_image} alt={game.name} />
@@ -28,9 +28,9 @@ const GameDetailsCard = ({ game, isLoading, error, refetch }) => {
               </div>
 
               <div className="platforms">
-                {game.platforms.map((p) => (
+                {game.platforms.map((p) => ( 
                   <span key={p.platform.id}>{p.platform.name}</span>
-                ))}
+                ))} 
               </div>
             </div>
           </div>
@@ -65,9 +65,11 @@ const GameDetailsCard = ({ game, isLoading, error, refetch }) => {
             </div>
           </div>
         </div>
-      )}
+      )} 
     </div>
-  );
-};
+  ); 
+}; 
 
-export default GameDetailsCard;
+export default GameDetailsCard; 
+
+
