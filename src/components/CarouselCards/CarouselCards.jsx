@@ -16,8 +16,10 @@ const CarouselCards = ({ game }) => {
       className="carouselCards"
     >
       <img src={game.background_image} alt={game.name} />
+
       <div className={`carouselCardsContent ${hide ? "hidden" : ""}`}>
         <h2>{game.name}</h2>
+
         <div>
           {game.parent_platforms.map((platform) => (
             <span
@@ -34,7 +36,9 @@ const CarouselCards = ({ game }) => {
               )}
             </span>
           ))}
+
           <p>{game.released}</p>
+
           <Link
             className="primaryBtn"
             to={`/games/${game.id}`}

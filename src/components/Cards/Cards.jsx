@@ -7,8 +7,8 @@ const Cards = ({ game }) => {
   return (
     <div className="card">
       <img loading="lazy" src={game.background_image} alt={game.name} />
+
       <div className="cardOverlay">
-        {}
         <button
           onClick={() => navigate(`/games/${game.id}`)}
           className="primaryBtn"
@@ -17,8 +17,10 @@ const Cards = ({ game }) => {
           View Details
         </button>
       </div>
+
       <div className="cardInfo">
         <h3>{game.name}</h3>
+
         <span>⭐ {game.rating}</span>
       </div>
     </div>

@@ -10,12 +10,15 @@ const Links = () => {
           Home
         </Link>
       </li>
+
       <li>
         <Link to={"/games"} aria-label="Navigate to Games">
           Games
         </Link>
       </li>
+
       <Menu />
+
       <li>
         <Link to={"/upcoming"} aria-label="Navigate to Upcoming Games">
           Upcoming

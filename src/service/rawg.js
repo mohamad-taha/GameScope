@@ -1,11 +1,12 @@
 const BASE_URL = "https://api.rawg.io/api";
 const API_KEY = import.meta.env.VITE_RAWG_API_KEY;
 
+const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
+
 const today = new Date().toISOString().split("T")[0];
 const nextYear = new Date().getFullYear() + 1;
 const currentYear = new Date().getFullYear();
 
-const YOUTUBE_API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
 
 /* ---------------------------
   🔥 Generic fetch helper

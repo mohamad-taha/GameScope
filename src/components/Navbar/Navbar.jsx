@@ -44,7 +44,7 @@ const Navbar = () => {
         <Links />
       </div>
 
-      {/* زر sidebar (غالباً للموبايل) */}
+      {/* زر sidebar (للموبايل) */}
       <SidebarBtn />
     </nav>
   );
