@@ -7,7 +7,6 @@ const today = new Date().toISOString().split("T")[0];
 const nextYear = new Date().getFullYear() + 1;
 const currentYear = new Date().getFullYear();
 
-
 /* ---------------------------
   🔥 Generic fetch helper
 ---------------------------- */
@@ -24,11 +23,11 @@ const fetchAPI = async (url) => {
 /* ---------------------------
   🎮 Games (pagination + platform filter)
 ---------------------------- */
-export const fetchGames = (page, platform) => {
+export const fetchGames = (page, platform, searchQuery) => {
   return fetchAPI(
     `${BASE_URL}/games?key=${API_KEY}&page=${page}&page_size=20${
       platform ? `&platforms=${platform}` : ""
-    }`,
+    }${searchQuery ? `&search=${encodeURIComponent(searchQuery)}` : ""}`,
   );
 };
 

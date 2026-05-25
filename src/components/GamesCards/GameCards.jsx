@@ -5,6 +5,7 @@ import Loader from "../Loader/Loader";
 import ErrorMsg from "../Error/ErrorMsg";
 import Pagination from "../Pagination/Pagination";
 import { useSearchParams } from "react-router-dom";
+import Searchbar from "../Searchbar/Searchbar";
 
 const GameCards = () => {
   // بنجيب ونعدل الـ query params من URL
@@ -16,6 +17,9 @@ const GameCards = () => {
   // المنصة من الـ URL (مثلاً 187 = PS5)
   const platform = searchParams.get("platform");
 
+  // اسم اللعبة من الـ URL (إذا ما موجود = "")
+  const gameName = searchParams.get("search") || "";
+
   // React Query لجلب الألعاب حسب الصفحة والمنصة
   const {
     data: games,
@@ -24,14 +28,16 @@ const GameCards = () => {
     refetch,
   } = useQuery({
     // مهم: كل ما page أو platform يتغيروا، يعمل refetch
-    queryKey: ["games", page, platform],
+    queryKey: ["games", page, platform, gameName],
 
     // fetch البيانات مع تمرير الفلاتر
-    queryFn: () => fetchGames(page, platform),
+    queryFn: () => fetchGames(page, platform, gameName),
   });
 
   return (
     <div className="mt">
+      <Searchbar setSearchParams={setSearchParams} value={gameName} />
+
       {/* حالة التحميل */}
       {isLoading ? (
         <Loader />
